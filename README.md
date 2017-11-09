@@ -18,7 +18,9 @@ Simple graphical front end for sending messages via `msg.exe` on _Windows_ syste
 
 ## Details
 
-Initially, _MsgUI_ was developed for administrators of a terminal server to notify either all or a specific user of a certain event. Even though, administrators should be able to use the command-line or the _PowerShell_, this program simplifies the notification process.
+Initially, _MsgUI_ was developed for administrators of a terminal server to notify either all or a specific user of a certain event.
+
+Even though, administrators should be able to use the command-line or the _PowerShell_, this program simplifies the notification process.
 
 As you can see on the right, the project is quite elementary and, as such, no replacement for the command-line use of `msg.exe`.
 
