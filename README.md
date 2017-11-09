@@ -37,7 +37,7 @@ There are only two requirements in order to use the program:
  * _Microsoft Windows_ version that contains `msg.exe` (should be included by default in _Windows 7_ and above)
  * _Microsoft .NET Framework 2.0_ (or higher)
 
-Notice that it has been tested and used on _Windows Server 2008 R2_ and _Windows Server 2016_, yet.
+Notice that it has only been tested and used on _Windows Server 2008 R2_ and _Windows Server 2016_, yet.
 
 ### Source code
 
