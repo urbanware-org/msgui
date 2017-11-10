@@ -22,9 +22,7 @@ Initially, _MsgUI_ was developed for administrators of a terminal server to noti
 
 Even though, administrators should be able to use the command-line or the _PowerShell_, this program simplifies the notification process.
 
-As you can see on the right, the project is quite elementary and, as such, no replacement for the command-line use of `msg.exe`.
-
-Due to the fact, that this was (or actually still is) a quick-and-dirty project, some things are hard coded and it misses some exception handlers.
+As you can see on the right, the project is quite elementary and, as such, not a complete alternative for the command-line use of `msg.exe`.
 
 [Top](#msgui-)
 
