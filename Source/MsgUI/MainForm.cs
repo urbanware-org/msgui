@@ -9,6 +9,7 @@
 
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 
 namespace MsgUI
@@ -30,6 +31,9 @@ namespace MsgUI
         public MainForm()
         {
             InitializeComponent();
+
+            tbMsgPath.Text = msg;
+            tbServer.Text = server;
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -39,11 +43,107 @@ namespace MsgUI
 
         #endregion
 
-        #region Command-line related
+        #region Command related
 
         private void buildCommand()
         {
             tbCommand.Text = msg + " " + server + " /TIME:" + delay + " " + user + " \"" + tbMessage.Text + "\"";
+        }
+
+        private bool checkExecutable(string path, bool confirm)
+        {
+            if (!msg.EndsWith("\\msg.exe"))
+            {
+                MessageBox.Show("The path must end with the name of the executable.", "Path to executable", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                if (File.Exists(msg))
+                {
+                    if (confirm)
+                        MessageBox.Show("Path check successful.", "Path to executable", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("The given executable does not exist.\n\nPlease check the path.", "Path to executable", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+
+            return false;
+        }
+
+        #endregion
+        
+        #region Send message event handler
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            if (rbCertainUser.Checked)
+            {
+                if (tbCertainUser.Text == "")
+                {
+                    MessageBox.Show("User name must not be empty.", "User", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                user = "\"" + tbCertainUser.Text + "\"";
+            }
+            else
+            {
+                user = "*";
+            }
+
+            if (rbSeconds.Checked)
+            {
+                delay = nudSeconds.Value.ToString();
+            }
+            else
+            {
+                delay = "0";
+            }
+
+            if (!checkExecutable(msg, false))
+                return;
+
+            if (tbMessage.Text == "")
+            {
+                MessageBox.Show("Message text must not be empty.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.FileName = msg;
+            startInfo.Arguments = server + " /TIME:" + delay + " " + user + " \"" + tbMessage.Text + "\"";
+            startInfo.UseShellExecute = true;
+            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+
+            try
+            {
+                Process.Start(startInfo);
+                MessageBox.Show("Message has been sent.", "Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                // Not really a clean solution to process every execption that way
+                MessageBox.Show("Failed to send the message.\n\nPlease check your settings and retry.\n\nFurthermore, you can copy the command to the clipboard and execute it on the command-line to get a detailed error message.", "Sent", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+        #endregion
+
+        #region Various event handlers
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            checkExecutable(msg, true);
+        }
+
+        private void btnLocalhost_Click(object sender, EventArgs e)
+        {
+            server = "/SERVER:" + System.Net.Dns.GetHostEntry(Environment.MachineName).HostName;
+            tbServer.Text = server;
         }
 
         private void tbCertainUser_TextChanged(object sender, EventArgs e)
@@ -71,10 +171,6 @@ namespace MsgUI
             delay = nudSeconds.Value.ToString();
             buildCommand();
         }
-
-        #endregion
-
-        #region Option related
 
         private void rbCertainUser_CheckedChanged(object sender, EventArgs e)
         {
@@ -114,49 +210,16 @@ namespace MsgUI
             buildCommand();
         }
 
-        #endregion
-
-        #region Send message event handler
-
-        private void btnSend_Click(object sender, EventArgs e)
+        private void tbMsgPath_Validated(object sender, EventArgs e)
         {
-            if (rbCertainUser.Checked)
-            {
-                if (tbCertainUser.Text == "")
-                {
-                    MessageBox.Show("User name must not be empty.", "User", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                user = "\"" + tbCertainUser.Text + "\"";
-            }
-            else
-            {
-                user = "*";
-            }
+            msg = tbMsgPath.Text;
+            buildCommand();
+        }
 
-            if (rbSeconds.Checked)
-            {
-                delay = nudSeconds.Value.ToString();
-            }
-            else
-            {
-                delay = "0";
-            }
-
-            if (tbMessage.Text == "")
-            {
-                MessageBox.Show("Message text must not be empty.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            ProcessStartInfo startInfo = new ProcessStartInfo();
-            startInfo.FileName = msg;
-            startInfo.Arguments = server + " /TIME:" + delay + " " + user + " \"" + tbMessage.Text + "\"";
-            startInfo.UseShellExecute = true;
-            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            Process.Start(startInfo);
-
-            MessageBox.Show("Message has been sent.", "Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        private void tbServer_Validated(object sender, EventArgs e)
+        {
+            server = tbServer.Text;
+            buildCommand();
         }
 
         #endregion
@@ -173,12 +236,13 @@ namespace MsgUI
 
         #region About form
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAbout_Click(object sender, EventArgs e)
         {
             AboutForm about = new AboutForm();
             about.ShowDialog();
         }
 
         #endregion
+
     }
 }

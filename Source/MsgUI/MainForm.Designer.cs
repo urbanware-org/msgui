@@ -47,10 +47,18 @@
             this.lblDisplay = new System.Windows.Forms.Label();
             this.gpDelay = new System.Windows.Forms.GroupBox();
             this.btnAbout = new System.Windows.Forms.Button();
+            this.rbExePath = new System.Windows.Forms.GroupBox();
+            this.btnCheck = new System.Windows.Forms.Button();
+            this.tbMsgPath = new System.Windows.Forms.TextBox();
+            this.gbServer = new System.Windows.Forms.GroupBox();
+            this.btnLocalhost = new System.Windows.Forms.Button();
+            this.tbServer = new System.Windows.Forms.TextBox();
             this.gbUser.SuspendLayout();
             this.gbMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSeconds)).BeginInit();
             this.gpDelay.SuspendLayout();
+            this.rbExePath.SuspendLayout();
+            this.gbServer.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbUser
@@ -61,7 +69,7 @@
             this.gbUser.Controls.Add(this.lblSendTo);
             this.gbUser.Location = new System.Drawing.Point(12, 12);
             this.gbUser.Name = "gbUser";
-            this.gbUser.Size = new System.Drawing.Size(355, 85);
+            this.gbUser.Size = new System.Drawing.Size(355, 66);
             this.gbUser.TabIndex = 0;
             this.gbUser.TabStop = false;
             this.gbUser.Text = "User";
@@ -69,16 +77,16 @@
             // tbCertainUser
             // 
             this.tbCertainUser.Enabled = false;
-            this.tbCertainUser.Location = new System.Drawing.Point(183, 45);
+            this.tbCertainUser.Location = new System.Drawing.Point(165, 37);
             this.tbCertainUser.Name = "tbCertainUser";
-            this.tbCertainUser.Size = new System.Drawing.Size(157, 21);
+            this.tbCertainUser.Size = new System.Drawing.Size(184, 21);
             this.tbCertainUser.TabIndex = 2;
             this.tbCertainUser.TextChanged += new System.EventHandler(this.tbCertainUser_TextChanged);
             // 
             // rbCertainUser
             // 
             this.rbCertainUser.AutoSize = true;
-            this.rbCertainUser.Location = new System.Drawing.Point(89, 46);
+            this.rbCertainUser.Location = new System.Drawing.Point(71, 38);
             this.rbCertainUser.Name = "rbCertainUser";
             this.rbCertainUser.Size = new System.Drawing.Size(88, 17);
             this.rbCertainUser.TabIndex = 1;
@@ -90,7 +98,7 @@
             // 
             this.rbAllUsers.AutoSize = true;
             this.rbAllUsers.Checked = true;
-            this.rbAllUsers.Location = new System.Drawing.Point(89, 23);
+            this.rbAllUsers.Location = new System.Drawing.Point(71, 15);
             this.rbAllUsers.Name = "rbAllUsers";
             this.rbAllUsers.Size = new System.Drawing.Size(157, 17);
             this.rbAllUsers.TabIndex = 0;
@@ -102,7 +110,7 @@
             // 
             this.lblSendTo.AutoSize = true;
             this.lblSendTo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSendTo.Location = new System.Drawing.Point(15, 25);
+            this.lblSendTo.Location = new System.Drawing.Point(6, 17);
             this.lblSendTo.Name = "lblSendTo";
             this.lblSendTo.Size = new System.Drawing.Size(59, 13);
             this.lblSendTo.TabIndex = 4;
@@ -115,20 +123,20 @@
             this.gbMessage.Controls.Add(this.lblCharsLeft);
             this.gbMessage.Controls.Add(this.tbMessage);
             this.gbMessage.Controls.Add(this.tbCommand);
-            this.gbMessage.Location = new System.Drawing.Point(12, 194);
+            this.gbMessage.Location = new System.Drawing.Point(12, 269);
             this.gbMessage.Name = "gbMessage";
-            this.gbMessage.Size = new System.Drawing.Size(355, 264);
-            this.gbMessage.TabIndex = 2;
+            this.gbMessage.Size = new System.Drawing.Size(355, 239);
+            this.gbMessage.TabIndex = 4;
             this.gbMessage.TabStop = false;
             this.gbMessage.Text = "Message";
             // 
             // lnkCopyCmd
             // 
             this.lnkCopyCmd.AutoSize = true;
-            this.lnkCopyCmd.Location = new System.Drawing.Point(6, 242);
+            this.lnkCopyCmd.Location = new System.Drawing.Point(3, 220);
             this.lnkCopyCmd.Name = "lnkCopyCmd";
             this.lnkCopyCmd.Size = new System.Drawing.Size(139, 13);
-            this.lnkCopyCmd.TabIndex = 7;
+            this.lnkCopyCmd.TabIndex = 2;
             this.lnkCopyCmd.TabStop = true;
             this.lnkCopyCmd.Text = "Copy command to clipboard";
             this.lnkCopyCmd.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCopyCmd_LinkClicked);
@@ -136,17 +144,17 @@
             // lnkClearMessage
             // 
             this.lnkClearMessage.AutoSize = true;
-            this.lnkClearMessage.Location = new System.Drawing.Point(6, 123);
+            this.lnkClearMessage.Location = new System.Drawing.Point(3, 112);
             this.lnkClearMessage.Name = "lnkClearMessage";
             this.lnkClearMessage.Size = new System.Drawing.Size(100, 13);
-            this.lnkClearMessage.TabIndex = 6;
+            this.lnkClearMessage.TabIndex = 1;
             this.lnkClearMessage.TabStop = true;
             this.lnkClearMessage.Text = "Clear message text";
             this.lnkClearMessage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkClearMessage_LinkClicked);
             // 
             // lblCharsLeft
             // 
-            this.lblCharsLeft.Location = new System.Drawing.Point(244, 122);
+            this.lblCharsLeft.Location = new System.Drawing.Point(244, 111);
             this.lblCharsLeft.Name = "lblCharsLeft";
             this.lblCharsLeft.Size = new System.Drawing.Size(105, 15);
             this.lblCharsLeft.TabIndex = 4;
@@ -160,19 +168,19 @@
             this.tbMessage.Multiline = true;
             this.tbMessage.Name = "tbMessage";
             this.tbMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbMessage.Size = new System.Drawing.Size(343, 99);
-            this.tbMessage.TabIndex = 5;
+            this.tbMessage.Size = new System.Drawing.Size(343, 89);
+            this.tbMessage.TabIndex = 0;
             this.tbMessage.TextChanged += new System.EventHandler(this.tbMessage_TextChanged);
             // 
             // tbCommand
             // 
             this.tbCommand.Enabled = false;
-            this.tbCommand.Location = new System.Drawing.Point(6, 140);
+            this.tbCommand.Location = new System.Drawing.Point(6, 128);
             this.tbCommand.MaxLength = 240;
             this.tbCommand.Multiline = true;
             this.tbCommand.Name = "tbCommand";
             this.tbCommand.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbCommand.Size = new System.Drawing.Size(343, 99);
+            this.tbCommand.Size = new System.Drawing.Size(343, 89);
             this.tbCommand.TabIndex = 4;
             this.tbCommand.TabStop = false;
             // 
@@ -180,10 +188,10 @@
             // 
             this.btnSend.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSend.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSend.Location = new System.Drawing.Point(238, 474);
+            this.btnSend.Location = new System.Drawing.Point(238, 514);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(129, 28);
-            this.btnSend.TabIndex = 7;
+            this.btnSend.TabIndex = 5;
             this.btnSend.Text = "Send message";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
@@ -191,7 +199,7 @@
             // nudSeconds
             // 
             this.nudSeconds.Enabled = false;
-            this.nudSeconds.Location = new System.Drawing.Point(276, 46);
+            this.nudSeconds.Location = new System.Drawing.Point(285, 38);
             this.nudSeconds.Maximum = new decimal(new int[] {
             10800,
             0,
@@ -204,7 +212,7 @@
             0});
             this.nudSeconds.Name = "nudSeconds";
             this.nudSeconds.Size = new System.Drawing.Size(64, 21);
-            this.nudSeconds.TabIndex = 5;
+            this.nudSeconds.TabIndex = 2;
             this.nudSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudSeconds.Value = new decimal(new int[] {
             60,
@@ -215,10 +223,10 @@
             // rbSeconds
             // 
             this.rbSeconds.AutoSize = true;
-            this.rbSeconds.Location = new System.Drawing.Point(89, 46);
+            this.rbSeconds.Location = new System.Drawing.Point(71, 38);
             this.rbSeconds.Name = "rbSeconds";
             this.rbSeconds.Size = new System.Drawing.Size(171, 17);
-            this.rbSeconds.TabIndex = 4;
+            this.rbSeconds.TabIndex = 1;
             this.rbSeconds.Text = "Time in seconds (60 = default)";
             this.rbSeconds.UseVisualStyleBackColor = true;
             // 
@@ -226,19 +234,19 @@
             // 
             this.rbHitsOK.AutoSize = true;
             this.rbHitsOK.Checked = true;
-            this.rbHitsOK.Location = new System.Drawing.Point(89, 23);
+            this.rbHitsOK.Location = new System.Drawing.Point(71, 15);
             this.rbHitsOK.Name = "rbHitsOK";
-            this.rbHitsOK.Size = new System.Drawing.Size(115, 17);
-            this.rbHitsOK.TabIndex = 3;
+            this.rbHitsOK.Size = new System.Drawing.Size(167, 17);
+            this.rbHitsOK.TabIndex = 0;
             this.rbHitsOK.TabStop = true;
-            this.rbHitsOK.Text = "Until user hits \"OK\"";
+            this.rbHitsOK.Text = "No delay (until user hits \"OK\")";
             this.rbHitsOK.UseVisualStyleBackColor = true;
             // 
             // lblDisplay
             // 
             this.lblDisplay.AutoSize = true;
             this.lblDisplay.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisplay.Location = new System.Drawing.Point(15, 25);
+            this.lblDisplay.Location = new System.Drawing.Point(3, 17);
             this.lblDisplay.Name = "lblDisplay";
             this.lblDisplay.Size = new System.Drawing.Size(57, 13);
             this.lblDisplay.TabIndex = 8;
@@ -250,9 +258,9 @@
             this.gpDelay.Controls.Add(this.lblDisplay);
             this.gpDelay.Controls.Add(this.rbSeconds);
             this.gpDelay.Controls.Add(this.rbHitsOK);
-            this.gpDelay.Location = new System.Drawing.Point(12, 103);
+            this.gpDelay.Location = new System.Drawing.Point(12, 84);
             this.gpDelay.Name = "gpDelay";
-            this.gpDelay.Size = new System.Drawing.Size(355, 85);
+            this.gpDelay.Size = new System.Drawing.Size(355, 67);
             this.gpDelay.TabIndex = 1;
             this.gpDelay.TabStop = false;
             this.gpDelay.Text = "Delay";
@@ -261,20 +269,86 @@
             // 
             this.btnAbout.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAbout.Location = new System.Drawing.Point(12, 474);
+            this.btnAbout.Location = new System.Drawing.Point(12, 514);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(95, 28);
             this.btnAbout.TabIndex = 8;
             this.btnAbout.TabStop = false;
             this.btnAbout.Text = "About ...";
             this.btnAbout.UseVisualStyleBackColor = true;
-            this.btnAbout.Click += new System.EventHandler(this.button1_Click);
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            // 
+            // rbExePath
+            // 
+            this.rbExePath.Controls.Add(this.btnCheck);
+            this.rbExePath.Controls.Add(this.tbMsgPath);
+            this.rbExePath.Location = new System.Drawing.Point(12, 157);
+            this.rbExePath.Name = "rbExePath";
+            this.rbExePath.Size = new System.Drawing.Size(355, 50);
+            this.rbExePath.TabIndex = 2;
+            this.rbExePath.TabStop = false;
+            this.rbExePath.Text = "Path to executable";
+            // 
+            // btnCheck
+            // 
+            this.btnCheck.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheck.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCheck.Location = new System.Drawing.Point(285, 16);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(64, 27);
+            this.btnCheck.TabIndex = 1;
+            this.btnCheck.TabStop = false;
+            this.btnCheck.Text = "Check";
+            this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            // 
+            // tbMsgPath
+            // 
+            this.tbMsgPath.Location = new System.Drawing.Point(6, 20);
+            this.tbMsgPath.Name = "tbMsgPath";
+            this.tbMsgPath.Size = new System.Drawing.Size(273, 21);
+            this.tbMsgPath.TabIndex = 0;
+            this.tbMsgPath.Validated += new System.EventHandler(this.tbMsgPath_Validated);
+            // 
+            // gbServer
+            // 
+            this.gbServer.Controls.Add(this.btnLocalhost);
+            this.gbServer.Controls.Add(this.tbServer);
+            this.gbServer.Location = new System.Drawing.Point(12, 213);
+            this.gbServer.Name = "gbServer";
+            this.gbServer.Size = new System.Drawing.Size(355, 50);
+            this.gbServer.TabIndex = 3;
+            this.gbServer.TabStop = false;
+            this.gbServer.Text = "Target server";
+            // 
+            // btnLocalhost
+            // 
+            this.btnLocalhost.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLocalhost.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLocalhost.Location = new System.Drawing.Point(285, 16);
+            this.btnLocalhost.Name = "btnLocalhost";
+            this.btnLocalhost.Size = new System.Drawing.Size(64, 27);
+            this.btnLocalhost.TabIndex = 1;
+            this.btnLocalhost.TabStop = false;
+            this.btnLocalhost.Text = "Localhost";
+            this.btnLocalhost.UseVisualStyleBackColor = true;
+            this.btnLocalhost.Click += new System.EventHandler(this.btnLocalhost_Click);
+            // 
+            // tbServer
+            // 
+            this.tbServer.Location = new System.Drawing.Point(6, 20);
+            this.tbServer.Name = "tbServer";
+            this.tbServer.Size = new System.Drawing.Size(273, 21);
+            this.tbServer.TabIndex = 0;
+            this.tbServer.Validated += new System.EventHandler(this.tbServer_Validated);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 515);
+            this.ClientSize = new System.Drawing.Size(377, 553);
+            this.Controls.Add(this.gbServer);
+            this.Controls.Add(this.rbExePath);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.gpDelay);
             this.Controls.Add(this.btnSend);
@@ -295,6 +369,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudSeconds)).EndInit();
             this.gpDelay.ResumeLayout(false);
             this.gpDelay.PerformLayout();
+            this.rbExePath.ResumeLayout(false);
+            this.rbExePath.PerformLayout();
+            this.gbServer.ResumeLayout(false);
+            this.gbServer.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -319,6 +397,12 @@
         private System.Windows.Forms.GroupBox gpDelay;
         private System.Windows.Forms.LinkLabel lnkCopyCmd;
         private System.Windows.Forms.Button btnAbout;
+        private System.Windows.Forms.GroupBox rbExePath;
+        private System.Windows.Forms.TextBox tbMsgPath;
+        private System.Windows.Forms.Button btnCheck;
+        private System.Windows.Forms.GroupBox gbServer;
+        private System.Windows.Forms.Button btnLocalhost;
+        private System.Windows.Forms.TextBox tbServer;
     }
 }
 
