@@ -41,7 +41,7 @@ Notice that it has only been tested and used on _Windows Server 2008 R2_ and _Wi
 
 The solution file requires at least _Microsoft Visual Studio 2012_. The initially uploaded binary has been compiled using _Visual Studio 2015 Community Edition_.
 
-Feel free to modify!
+Feel free to fork and modify!
 
 [Top](#msgui-)
 
