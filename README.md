@@ -47,7 +47,7 @@ Feel free to fork and modify!
 
 ## Useless facts
 
-* The first version uploaded on *GitHub* was *MsgUI* 1.1.6.0 built on Novemver 9th, 2017.
+* The first version uploaded on *GitHub* was *MsgUI* 1.1.6.0 built on Novemver 9<sup>th</sup>, 2017.
 
 [Top](#msgui-)
 
