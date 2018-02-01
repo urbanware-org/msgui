@@ -23,3 +23,12 @@ C:\Users\rk\Desktop\MsgUI\Source\MsgUI\obj\Debug\MsgUI.Properties.Resources.reso
 C:\Users\rk\Desktop\MsgUI\Source\MsgUI\obj\Debug\MsgUI.csproj.GenerateResource.Cache
 C:\Users\rk\Desktop\MsgUI\Source\MsgUI\bin\Debug\MsgUI.exe
 C:\Users\rk\Desktop\MsgUI\Source\MsgUI\bin\Debug\MsgUI.pdb
+C:\Users\rk\Desktop\msgui-master\Source\MsgUI\obj\Debug\MsgUI.exe
+C:\Users\rk\Desktop\msgui-master\Source\MsgUI\obj\Debug\MsgUI.pdb
+C:\Users\rk\Desktop\msgui-master\Source\MsgUI\bin\Debug\MsgUI.exe
+C:\Users\rk\Desktop\msgui-master\Source\MsgUI\bin\Debug\MsgUI.pdb
+C:\Users\rk\Desktop\msgui-master\Source\MsgUI\obj\Debug\MsgUI.csprojResolveAssemblyReference.cache
+C:\Users\rk\Desktop\msgui-master\Source\MsgUI\obj\Debug\MsgUI.AboutForm.resources
+C:\Users\rk\Desktop\msgui-master\Source\MsgUI\obj\Debug\MsgUI.MainForm.resources
+C:\Users\rk\Desktop\msgui-master\Source\MsgUI\obj\Debug\MsgUI.Properties.Resources.resources
+C:\Users\rk\Desktop\msgui-master\Source\MsgUI\obj\Debug\MsgUI.csproj.GenerateResource.Cache
