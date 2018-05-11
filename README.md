@@ -4,6 +4,7 @@
 *   [Definition](#definition)
 *   [Details](#details)
 *   [Requirements](#requirements)
+*   [Contact](#contact)
 *   [Useless facts](#useless-facts)
 
 ----
@@ -42,6 +43,14 @@ Notice that it has only been tested and used on *Windows Server 2008 R2* and *Wi
 The solution file requires at least *Microsoft Visual Studio 2012*. The initially uploaded binary has been compiled using *Visual Studio 2015 Community Edition*.
 
 Feel free to fork and modify!
+
+[Top](#msgui-)
+
+## Contact
+
+Any suggestions, questions, bugs to report or feedback to give?
+
+You can contact me by sending an email to <dev@urbanware.org>.
 
 [Top](#msgui-)
 
