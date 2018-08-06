@@ -38,6 +38,7 @@
             this.lnkLicense = new System.Windows.Forms.LinkLabel();
             this.lnkGitHub = new System.Windows.Forms.LinkLabel();
             this.btnClose = new System.Windows.Forms.Button();
+            this.lnkGitLab = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,9 +91,9 @@
             this.lblGitHub.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblGitHub.Location = new System.Drawing.Point(82, 102);
             this.lblGitHub.Name = "lblGitHub";
-            this.lblGitHub.Size = new System.Drawing.Size(124, 13);
+            this.lblGitHub.Size = new System.Drawing.Size(181, 13);
             this.lblGitHub.TabIndex = 13;
-            this.lblGitHub.Text = "This project is hosted on";
+            this.lblGitHub.Text = "This project is hosted on             and";
             // 
             // lblLicense
             // 
@@ -140,12 +141,25 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // lnkGitLab
+            // 
+            this.lnkGitLab.AutoSize = true;
+            this.lnkGitLab.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkGitLab.Location = new System.Drawing.Point(260, 102);
+            this.lnkGitLab.Name = "lnkGitLab";
+            this.lnkGitLab.Size = new System.Drawing.Size(37, 13);
+            this.lnkGitLab.TabIndex = 15;
+            this.lnkGitLab.TabStop = true;
+            this.lnkGitLab.Text = "GitLab";
+            this.lnkGitLab.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkGitLab_LinkClicked);
+            // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 136);
             this.ControlBox = false;
+            this.Controls.Add(this.lnkGitLab);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lnkGitHub);
             this.Controls.Add(this.lnkLicense);
@@ -180,5 +194,6 @@
         private System.Windows.Forms.LinkLabel lnkLicense;
         private System.Windows.Forms.LinkLabel lnkGitHub;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.LinkLabel lnkGitLab;
     }
 }

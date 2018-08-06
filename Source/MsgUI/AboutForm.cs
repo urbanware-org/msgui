@@ -1,12 +1,12 @@
 ﻿/******************************************************************************
  * MsgUI - Simple graphical front end for sending messages via 'msg.exe'      *
  * About form                                                                 *
- * Copyright (C) 2017 by Ralf Kilian                                          *
+ * Copyright (C) 2018 by Ralf Kilian                                          *
  * Distributed under the MIT License (https://opensource.org/licenses/MIT)    *
  *                                                                            *
  * GitHub: https://github.com/urbanware-org/msgui                             *
  ******************************************************************************/
- 
+
 using System;
 using System.Diagnostics;
 using System.Reflection;
@@ -44,6 +44,11 @@ namespace MsgUI
             Process.Start("https://github.com/urbanware-org/msgui");
         }
 
+        private void lnkGitLab_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://gitlab.com/urbanware-org/msgui");
+        }
+
         #endregion
 
         #region Command button event handler
@@ -54,5 +59,6 @@ namespace MsgUI
         }
 
         #endregion
+
     }
 }
