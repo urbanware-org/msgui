@@ -3,6 +3,7 @@
 **Table of contents**
 *   [Definition](#definition)
 *   [Details](#details)
+*   [Environment](#environment)
 *   [Requirements](#requirements)
 *   [Contact](#contact)
 *   [Useless facts](#useless-facts)
@@ -27,6 +28,28 @@ As you can see on the right, the project is quite elementary and, as such, not a
 
 [Top](#msgui-)
 
+## Environment
+
+Even though *MsgUI* uses `msg.exe` on every *Windows* system, there are differences how the message is being displayed.
+
+### Newer *Windows* versions
+
+<img src="https://github.com/urbanware-org/msgui/blob/master/Stuff/GitHub/MsgUI_Win2016.png" alt="MsgUI on Windows Server 2016" width="200px" align="right"/>For example, on *Windows Server 2016*, after the message has been sent, the screen of the recipients  gets darkened, sort of locked and the message is displayed in the center of the screen.
+
+The user must confirm the message to continue working (if no delay is set to automatically hide it again).
+
+This should also apply to *Windows 10* as well as *Windows Server 2012 R2*.
+
+### Older *Windows* versions
+
+<img src="https://github.com/urbanware-org/msgui/blob/master/Stuff/GitHub/MsgUI_Win2008.png" alt="MsgUI on Windows Server 2008 R2" width="200px" align="right"/>For example, on *Windows Server 2008 R2*, a simple message box appears that can be moved.
+
+Nevertheless, it is always on top (in the foreground) and cannot be minimized.
+
+This is the default behavior on *Windows 7*, *Windows Server 2008* and below.
+
+[Top](#msgui-)
+
 ## Requirements
 
 ### Binary
@@ -35,8 +58,6 @@ There are only two requirements in order to use the program:
 
 *   *Microsoft Windows* version that contains `msg.exe` (should be included by default in *Windows 7* and above)
 *   *Microsoft .NET Framework 2.0* (or higher)
-
-Notice that it has only been tested and used on *Windows Server 2008 R2* and *Windows Server 2016*, yet.
 
 ### Source code
 
