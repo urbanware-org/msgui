@@ -1,4 +1,4 @@
-# *MsgUI* <img src="https://github.com/urbanware-org/msgui/blob/master/Source/MsgUI/Resources/Logo/MsgUI_48x48.png" alt="MsgUI logo" height="48px" width="48px" align="right"/>
+# *MsgUI* <img src="https://github.com/urbanware-org/msgui/blob/master/Source/MsgUI/Resources/Logo/MsgUI_48x48.png" alt="MsgUI logo" height="128px" width="128px" align="right"/>
 
 **Table of contents**
 *   [Definition](#definition)
