@@ -1,4 +1,4 @@
-# *MsgUI* <img src="https://github.com/urbanware-org/msgui/blob/master/Source/MsgUI/Resources/Logo/MsgUI_256x256.png" alt="MsgUI logo" height="128px" width="128px" align="right"/>
+# *MsgUI* <img src="https://raw.githubusercontent.com/urbanware-org/msgui/main/Source/MsgUI/Resources/Logo/MsgUI_256x256.png" alt="MsgUI logo" height="128px" width="128px" align="right"/>
 
 **Table of contents**
 *   [Definition](#definition)
@@ -10,7 +10,7 @@
 
 ----
 
-<img src="https://github.com/urbanware-org/msgui/blob/master/Source/MsgUI/Resources/Images/MsgUI.png" alt="MsgUI" align="right"/>
+<img src="https://raw.githubusercontent.com/urbanware-org/msgui/main/Source/MsgUI/Resources/Images/MsgUI.png" alt="MsgUI" align="right"/>
 
 ## Definition
 
@@ -34,7 +34,7 @@ Even though *MsgUI* uses `msg.exe` on every *Windows* system, there are differen
 
 ### Newer *Windows* versions
 
-<img src="https://github.com/urbanware-org/msgui/blob/master/Stuff/GitHub/MsgUI_Win2016.png" alt="MsgUI on Windows Server 2016" width="200px" align="right"/>For example, on *Windows Server 2016*, after the message has been sent, the screen of the recipients  gets darkened, sort of locked and the message is displayed in the center of the screen.
+<img src="https://raw.githubusercontent.com/urbanware-org/msgui/main/Stuff/GitHub/MsgUI_Win2016.png" alt="MsgUI on Windows Server 2016" width="200px" align="right"/>For example, on *Windows Server 2016*, after the message has been sent, the screen of the recipients  gets darkened, sort of locked and the message is displayed in the center of the screen.
 
 The user must confirm the message to continue working (if no delay is set to automatically hide it again).
 
@@ -42,7 +42,7 @@ This should also apply to *Windows 10* as well as *Windows Server 2012 R2*.
 
 ### Older *Windows* versions
 
-<img src="https://github.com/urbanware-org/msgui/blob/master/Stuff/GitHub/MsgUI_Win2008.png" alt="MsgUI on Windows Server 2008 R2" width="200px" align="right"/>For example, on *Windows Server 2008 R2*, a simple message box appears that can be moved.
+<img src="https://raw.githubusercontent.com/urbanware-org/msgui/main/Stuff/GitHub/MsgUI_Win2008.png" alt="MsgUI on Windows Server 2008 R2" width="200px" align="right"/>For example, on *Windows Server 2008 R2*, a simple message box appears that can be moved.
 
 Nevertheless, it is always on top (in the foreground) and cannot be minimized.
 
