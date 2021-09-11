@@ -56,7 +56,7 @@ This is the default behavior on *Windows 7*, *Windows Server 2008* and below.
 
 There are only two requirements in order to use the program:
 
-*   *Microsoft Windows* version that contains `msg.exe` (should be included by default in *Windows 7* and above)
+*   *Microsoft Windows* version that contains `msg.exe` (should be included by default in *Windows 7* and above, but may not be included in Home Editions)
 *   *Microsoft .NET Framework* 4.5 (or higher)
 
 ### Source code
