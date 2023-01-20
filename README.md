@@ -78,5 +78,6 @@ You can contact me by sending an email to [dev@urbanware.org](mailto:dev@urbanwa
 ## Useless facts
 
 *   The first version uploaded on *GitHub* was *MsgUI* 1.1.6.0 built on Novemver 9<sup>th</sup>, 2017.
+*   The project name is an abbreviation for *Msg.exe Graphical User Interface*.
 
 [Top](#msgui-)
