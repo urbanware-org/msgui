@@ -1,11 +1,12 @@
-﻿/******************************************************************************
- * MsgUI - Simple graphical front end for sending messages via 'msg.exe'      *
- * Main form                                                                  *
- * Copyright (C) 2018 by Ralf Kilian                                          *
- * Distributed under the MIT License (https://opensource.org/licenses/MIT)    *
- *                                                                            *
- * GitHub: https://github.com/urbanware-org/msgui                             *
- ******************************************************************************/
+﻿/*
+    MsgUI - Simple graphical front end for sending messages via 'msg.exe'
+    Main form
+    Copyright (C) 2018 by Ralf Kilian
+    Distributed under the MIT License (https://opensource.org/licenses/MIT)
+
+    GitHub: https://github.com/urbanware-org/msgui
+    GitLab: https://gitlab.com/urbanware-org/msgui
+*/
 
 using System;
 using System.Diagnostics;
@@ -74,7 +75,7 @@ namespace MsgUI
         }
 
         #endregion
-        
+
         #region Send message event handler
 
         private void btnSend_Click(object sender, EventArgs e)
