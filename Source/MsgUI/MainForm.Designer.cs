@@ -60,9 +60,9 @@
             this.rbExePath.SuspendLayout();
             this.gbServer.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // gbUser
-            // 
+            //
             this.gbUser.Controls.Add(this.tbCertainUser);
             this.gbUser.Controls.Add(this.rbCertainUser);
             this.gbUser.Controls.Add(this.rbAllUsers);
@@ -73,18 +73,18 @@
             this.gbUser.TabIndex = 0;
             this.gbUser.TabStop = false;
             this.gbUser.Text = "User";
-            // 
+            //
             // tbCertainUser
-            // 
+            //
             this.tbCertainUser.Enabled = false;
             this.tbCertainUser.Location = new System.Drawing.Point(165, 37);
             this.tbCertainUser.Name = "tbCertainUser";
             this.tbCertainUser.Size = new System.Drawing.Size(184, 21);
             this.tbCertainUser.TabIndex = 2;
             this.tbCertainUser.TextChanged += new System.EventHandler(this.tbCertainUser_TextChanged);
-            // 
+            //
             // rbCertainUser
-            // 
+            //
             this.rbCertainUser.AutoSize = true;
             this.rbCertainUser.Location = new System.Drawing.Point(71, 38);
             this.rbCertainUser.Name = "rbCertainUser";
@@ -93,9 +93,9 @@
             this.rbCertainUser.Text = "Certain user:";
             this.rbCertainUser.UseVisualStyleBackColor = true;
             this.rbCertainUser.CheckedChanged += new System.EventHandler(this.rbCertainUser_CheckedChanged);
-            // 
+            //
             // rbAllUsers
-            // 
+            //
             this.rbAllUsers.AutoSize = true;
             this.rbAllUsers.Checked = true;
             this.rbAllUsers.Location = new System.Drawing.Point(71, 15);
@@ -105,9 +105,9 @@
             this.rbAllUsers.TabStop = true;
             this.rbAllUsers.Text = "All currently logged in users";
             this.rbAllUsers.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblSendTo
-            // 
+            //
             this.lblSendTo.AutoSize = true;
             this.lblSendTo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSendTo.Location = new System.Drawing.Point(6, 17);
@@ -115,9 +115,9 @@
             this.lblSendTo.Size = new System.Drawing.Size(59, 13);
             this.lblSendTo.TabIndex = 4;
             this.lblSendTo.Text = "Send to...";
-            // 
+            //
             // gbMessage
-            // 
+            //
             this.gbMessage.Controls.Add(this.lnkCopyCmd);
             this.gbMessage.Controls.Add(this.lnkClearMessage);
             this.gbMessage.Controls.Add(this.lblCharsLeft);
@@ -129,9 +129,9 @@
             this.gbMessage.TabIndex = 4;
             this.gbMessage.TabStop = false;
             this.gbMessage.Text = "Message";
-            // 
+            //
             // lnkCopyCmd
-            // 
+            //
             this.lnkCopyCmd.AutoSize = true;
             this.lnkCopyCmd.Location = new System.Drawing.Point(3, 220);
             this.lnkCopyCmd.Name = "lnkCopyCmd";
@@ -140,9 +140,9 @@
             this.lnkCopyCmd.TabStop = true;
             this.lnkCopyCmd.Text = "Copy command to clipboard";
             this.lnkCopyCmd.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCopyCmd_LinkClicked);
-            // 
+            //
             // lnkClearMessage
-            // 
+            //
             this.lnkClearMessage.AutoSize = true;
             this.lnkClearMessage.Location = new System.Drawing.Point(3, 112);
             this.lnkClearMessage.Name = "lnkClearMessage";
@@ -151,18 +151,18 @@
             this.lnkClearMessage.TabStop = true;
             this.lnkClearMessage.Text = "Clear message text";
             this.lnkClearMessage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkClearMessage_LinkClicked);
-            // 
+            //
             // lblCharsLeft
-            // 
+            //
             this.lblCharsLeft.Location = new System.Drawing.Point(244, 111);
             this.lblCharsLeft.Name = "lblCharsLeft";
             this.lblCharsLeft.Size = new System.Drawing.Size(105, 15);
             this.lblCharsLeft.TabIndex = 4;
             this.lblCharsLeft.Text = "240 characters left";
             this.lblCharsLeft.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
+            //
             // tbMessage
-            // 
+            //
             this.tbMessage.Location = new System.Drawing.Point(6, 20);
             this.tbMessage.MaxLength = 240;
             this.tbMessage.Multiline = true;
@@ -171,9 +171,9 @@
             this.tbMessage.Size = new System.Drawing.Size(343, 89);
             this.tbMessage.TabIndex = 0;
             this.tbMessage.TextChanged += new System.EventHandler(this.tbMessage_TextChanged);
-            // 
+            //
             // tbCommand
-            // 
+            //
             this.tbCommand.Enabled = false;
             this.tbCommand.Location = new System.Drawing.Point(6, 128);
             this.tbCommand.MaxLength = 240;
@@ -183,9 +183,9 @@
             this.tbCommand.Size = new System.Drawing.Size(343, 89);
             this.tbCommand.TabIndex = 4;
             this.tbCommand.TabStop = false;
-            // 
+            //
             // btnSend
-            // 
+            //
             this.btnSend.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSend.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSend.Location = new System.Drawing.Point(238, 514);
@@ -195,9 +195,9 @@
             this.btnSend.Text = "Send message";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-            // 
+            //
             // nudSeconds
-            // 
+            //
             this.nudSeconds.Enabled = false;
             this.nudSeconds.Location = new System.Drawing.Point(285, 38);
             this.nudSeconds.Maximum = new decimal(new int[] {
@@ -219,9 +219,9 @@
             0,
             0,
             0});
-            // 
+            //
             // rbSeconds
-            // 
+            //
             this.rbSeconds.AutoSize = true;
             this.rbSeconds.Location = new System.Drawing.Point(71, 38);
             this.rbSeconds.Name = "rbSeconds";
@@ -229,9 +229,9 @@
             this.rbSeconds.TabIndex = 1;
             this.rbSeconds.Text = "Time in seconds (60 = default)";
             this.rbSeconds.UseVisualStyleBackColor = true;
-            // 
+            //
             // rbHitsOK
-            // 
+            //
             this.rbHitsOK.AutoSize = true;
             this.rbHitsOK.Checked = true;
             this.rbHitsOK.Location = new System.Drawing.Point(71, 15);
@@ -241,9 +241,9 @@
             this.rbHitsOK.TabStop = true;
             this.rbHitsOK.Text = "No delay (until user hits \"OK\")";
             this.rbHitsOK.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblDisplay
-            // 
+            //
             this.lblDisplay.AutoSize = true;
             this.lblDisplay.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisplay.Location = new System.Drawing.Point(3, 17);
@@ -251,9 +251,9 @@
             this.lblDisplay.Size = new System.Drawing.Size(57, 13);
             this.lblDisplay.TabIndex = 8;
             this.lblDisplay.Text = "Display...";
-            // 
+            //
             // gpDelay
-            // 
+            //
             this.gpDelay.Controls.Add(this.nudSeconds);
             this.gpDelay.Controls.Add(this.lblDisplay);
             this.gpDelay.Controls.Add(this.rbSeconds);
@@ -264,9 +264,9 @@
             this.gpDelay.TabIndex = 1;
             this.gpDelay.TabStop = false;
             this.gpDelay.Text = "Delay";
-            // 
+            //
             // btnAbout
-            // 
+            //
             this.btnAbout.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAbout.Location = new System.Drawing.Point(12, 514);
@@ -274,12 +274,12 @@
             this.btnAbout.Size = new System.Drawing.Size(95, 28);
             this.btnAbout.TabIndex = 8;
             this.btnAbout.TabStop = false;
-            this.btnAbout.Text = "About ...";
+            this.btnAbout.Text = "About...";
             this.btnAbout.UseVisualStyleBackColor = true;
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
-            // 
+            //
             // rbExePath
-            // 
+            //
             this.rbExePath.Controls.Add(this.btnCheck);
             this.rbExePath.Controls.Add(this.tbMsgPath);
             this.rbExePath.Location = new System.Drawing.Point(12, 157);
@@ -288,9 +288,9 @@
             this.rbExePath.TabIndex = 2;
             this.rbExePath.TabStop = false;
             this.rbExePath.Text = "Path to executable";
-            // 
+            //
             // btnCheck
-            // 
+            //
             this.btnCheck.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheck.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCheck.Location = new System.Drawing.Point(285, 16);
@@ -301,17 +301,17 @@
             this.btnCheck.Text = "Check";
             this.btnCheck.UseVisualStyleBackColor = true;
             this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
-            // 
+            //
             // tbMsgPath
-            // 
+            //
             this.tbMsgPath.Location = new System.Drawing.Point(6, 20);
             this.tbMsgPath.Name = "tbMsgPath";
             this.tbMsgPath.Size = new System.Drawing.Size(273, 21);
             this.tbMsgPath.TabIndex = 0;
             this.tbMsgPath.Validated += new System.EventHandler(this.tbMsgPath_Validated);
-            // 
+            //
             // gbServer
-            // 
+            //
             this.gbServer.Controls.Add(this.btnLocalhost);
             this.gbServer.Controls.Add(this.tbServer);
             this.gbServer.Location = new System.Drawing.Point(12, 213);
@@ -320,9 +320,9 @@
             this.gbServer.TabIndex = 3;
             this.gbServer.TabStop = false;
             this.gbServer.Text = "Target server";
-            // 
+            //
             // btnLocalhost
-            // 
+            //
             this.btnLocalhost.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLocalhost.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLocalhost.Location = new System.Drawing.Point(285, 16);
@@ -333,17 +333,17 @@
             this.btnLocalhost.Text = "Localhost";
             this.btnLocalhost.UseVisualStyleBackColor = true;
             this.btnLocalhost.Click += new System.EventHandler(this.btnLocalhost_Click);
-            // 
+            //
             // tbServer
-            // 
+            //
             this.tbServer.Location = new System.Drawing.Point(6, 20);
             this.tbServer.Name = "tbServer";
             this.tbServer.Size = new System.Drawing.Size(273, 21);
             this.tbServer.TabIndex = 0;
             this.tbServer.Validated += new System.EventHandler(this.tbServer_Validated);
-            // 
+            //
             // MainForm
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(377, 553);

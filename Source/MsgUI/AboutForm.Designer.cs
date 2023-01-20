@@ -41,9 +41,9 @@
             this.lnkGitLab = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // lblApplication
-            // 
+            //
             this.lblApplication.AutoSize = true;
             this.lblApplication.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApplication.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -52,9 +52,9 @@
             this.lblApplication.Size = new System.Drawing.Size(43, 13);
             this.lblApplication.TabIndex = 11;
             this.lblApplication.Text = "MsgUI";
-            // 
+            //
             // lblCopyright
-            // 
+            //
             this.lblCopyright.AutoSize = true;
             this.lblCopyright.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCopyright.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -63,9 +63,9 @@
             this.lblCopyright.Size = new System.Drawing.Size(54, 13);
             this.lblCopyright.TabIndex = 10;
             this.lblCopyright.Text = "Copyright";
-            // 
+            //
             // lblVersion
-            // 
+            //
             this.lblVersion.AutoSize = true;
             this.lblVersion.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVersion.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -74,18 +74,18 @@
             this.lblVersion.Size = new System.Drawing.Size(42, 13);
             this.lblVersion.TabIndex = 9;
             this.lblVersion.Text = "Version";
-            // 
+            //
             // pbLogo
-            // 
+            //
             this.pbLogo.Image = global::MsgUI.Properties.Resources.MsgUI_64x64;
             this.pbLogo.Location = new System.Drawing.Point(12, 12);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(64, 64);
             this.pbLogo.TabIndex = 12;
             this.pbLogo.TabStop = false;
-            // 
+            //
             // lblGitHub
-            // 
+            //
             this.lblGitHub.AutoSize = true;
             this.lblGitHub.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGitHub.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -94,9 +94,9 @@
             this.lblGitHub.Size = new System.Drawing.Size(181, 13);
             this.lblGitHub.TabIndex = 13;
             this.lblGitHub.Text = "This project is hosted on             and";
-            // 
+            //
             // lblLicense
-            // 
+            //
             this.lblLicense.AutoSize = true;
             this.lblLicense.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLicense.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -105,9 +105,9 @@
             this.lblLicense.Size = new System.Drawing.Size(109, 13);
             this.lblLicense.TabIndex = 14;
             this.lblLicense.Text = "Distributed under the";
-            // 
+            //
             // lnkLicense
-            // 
+            //
             this.lnkLicense.AutoSize = true;
             this.lnkLicense.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLicense.Location = new System.Drawing.Point(187, 79);
@@ -117,9 +117,9 @@
             this.lnkLicense.TabStop = true;
             this.lnkLicense.Text = "MIT License";
             this.lnkLicense.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkLicense_LinkClicked);
-            // 
+            //
             // lnkGitHub
-            // 
+            //
             this.lnkGitHub.AutoSize = true;
             this.lnkGitHub.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkGitHub.Location = new System.Drawing.Point(202, 102);
@@ -129,9 +129,9 @@
             this.lnkGitHub.TabStop = true;
             this.lnkGitHub.Text = "GitHub";
             this.lnkGitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkGitHub_LinkClicked);
-            // 
+            //
             // btnClose
-            // 
+            //
             this.btnClose.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Location = new System.Drawing.Point(251, 12);
             this.btnClose.Name = "btnClose";
@@ -140,9 +140,9 @@
             this.btnClose.Text = "OK";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
+            //
             // lnkGitLab
-            // 
+            //
             this.lnkGitLab.AutoSize = true;
             this.lnkGitLab.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkGitLab.Location = new System.Drawing.Point(260, 102);
@@ -152,9 +152,9 @@
             this.lnkGitLab.TabStop = true;
             this.lnkGitLab.Text = "GitLab";
             this.lnkGitLab.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkGitLab_LinkClicked);
-            // 
+            //
             // AboutForm
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 136);
@@ -176,7 +176,7 @@
             this.Name = "AboutForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "About ...";
+            this.Text = "About...";
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
