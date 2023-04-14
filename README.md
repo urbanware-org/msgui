@@ -32,15 +32,13 @@ As you can see on the right, the project is quite elementary and, as such, not a
 
 Even though *MsgUI* uses `msg.exe` on every *Windows* system, there are differences how the message is being displayed.
 
-### Newer *Windows* versions
+### Locked screen with embedded message
 
-<img src="https://raw.githubusercontent.com/urbanware-org/msgui/main/Stuff/GitHub/MsgUI_Win2016.png" alt="MsgUI on Windows Server 2016" width="200px" align="right"/>For example, on *Windows Server 2016*, after the message has been sent, the screen of the recipients  gets darkened, sort of locked and the message is displayed in the center of the screen.
+<img src="https://raw.githubusercontent.com/urbanware-org/msgui/main/Stuff/GitHub/MsgUI_Win2016.png" alt="MsgUI on Windows Server 2016" width="200px" align="right"/>For example, on *Windows Server 2016*, after the message has been sent, the screen of the recipients gets darkened, sort of locked and the message is displayed in the center of the screen.
 
 The user must confirm the message to continue working (if no delay is set to automatically hide it again).
 
-This should also apply to *Windows 10* as well as *Windows Server 2012 R2*.
-
-### Older *Windows* versions
+### Movable message box
 
 <img src="https://raw.githubusercontent.com/urbanware-org/msgui/main/Stuff/GitHub/MsgUI_Win2008.png" alt="MsgUI on Windows Server 2008 R2" width="200px" align="right"/>For example, on *Windows Server 2008 R2*, a simple message box appears that can be moved.
 
