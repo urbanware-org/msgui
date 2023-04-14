@@ -26,11 +26,13 @@ Even though, administrators should be able to use the command-line or the *Power
 
 As you can see on the right, the project is quite elementary and, as such, not a complete alternative for the command-line use of `msg.exe`.
 
+Notice that `msg.exe` is included in professional and enterprise editions of *Windows*, but not in any home edition.
+
 [Top](#msgui-)
 
 ## Environment
 
-Even though *MsgUI* uses `msg.exe` on every *Windows* system, there are differences how the message is being displayed.
+Even though *MsgUI* uses `msg.exe` on every *Windows* system, there are differences how the message is being displayed depending on the environment used.
 
 ### Locked screen with embedded message
 
@@ -43,8 +45,6 @@ The user must confirm the message to continue working (if no delay is set to aut
 <img src="https://raw.githubusercontent.com/urbanware-org/msgui/main/Stuff/GitHub/MsgUI_Win2008.png" alt="MsgUI on Windows Server 2008 R2" width="200px" align="right"/>For example, on *Windows Server 2008 R2*, a simple message box appears that can be moved.
 
 Nevertheless, it is always on top (in the foreground) and cannot be minimized.
-
-This is the default behavior on *Windows 7*, *Windows Server 2008* and below.
 
 [Top](#msgui-)
 
