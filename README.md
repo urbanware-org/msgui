@@ -50,11 +50,13 @@ Nevertheless, it is always on top (in the foreground) and cannot be minimized.
 
 ## Requirements
 
+As already mentioned above, `msg.exe` is not included in *Windows* home editions, so a professional or enterprise version is required.
+
 ### Binary
 
-There are only two requirements in order to use the program:
+There are only two requirements in order to use the program.
 
-*   *Microsoft Windows* version that contains `msg.exe` (should be included by default in *Windows 7* and above, but may not be included in Home Editions)
+*   *Microsoft Windows 7* and above
 *   *Microsoft .NET Framework* 4.5 (or higher)
 
 ### Source code
