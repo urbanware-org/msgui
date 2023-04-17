@@ -1,7 +1,7 @@
 ﻿/*
     MsgUI - Simple graphical front end for sending messages via 'msg.exe'
     Main form
-    Copyright (c) 2018 by Ralf Kilian
+    Copyright (c) 2023 by Ralf Kilian
     Distributed under the MIT License (https://opensource.org/licenses/MIT)
 
     GitHub: https://github.com/urbanware-org/msgui
