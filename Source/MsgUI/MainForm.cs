@@ -139,6 +139,11 @@ namespace MsgUI
             checkExecutable(msg, true);
         }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void btnLocalhost_Click(object sender, EventArgs e)
         {
             server = "/SERVER:" + System.Net.Dns.GetHostEntry(Environment.MachineName).HostName;
@@ -190,6 +195,11 @@ namespace MsgUI
             buildCommand();
         }
 
+        private void rbHitsOK_CheckedChanged(object sender, EventArgs e)
+        {
+            delay = "0";
+            buildCommand();
+        }
 
         private void rbSeconds_CheckedChanged(object sender, EventArgs e)
         {
@@ -201,7 +211,6 @@ namespace MsgUI
             else
             {
                 nudSeconds.Enabled = false;
-                nudSeconds.Value = 10;
                 nudSeconds.Value = 60;
             }
 
