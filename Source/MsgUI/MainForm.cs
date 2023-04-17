@@ -55,19 +55,19 @@ namespace MsgUI
         {
             if (!msg.EndsWith("\\msg.exe"))
             {
-                MessageBox.Show("The path must end with the name of the executable.", "Path to executable", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("The path to the \"msg.exe\" executable must end with its filename.", "Path to executable", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
                 if (File.Exists(msg))
                 {
                     if (confirm)
-                        MessageBox.Show("Path check successful.", "Path to executable", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("The \"msg.exe\" executable was found at the given path.", "Path to executable", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return true;
                 }
                 else
                 {
-                    MessageBox.Show("The given executable does not exist.\n\nPlease check the path.", "Path to executable", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("The given path to the \"msg.exe\" executable does not exist.\n\nNotice that it has to be an absolute path without any variables such as \"%WINDIR%\", as they are not supported here.", "Path to executable", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
 
@@ -129,8 +129,6 @@ namespace MsgUI
                 MessageBox.Show("Failed to send the message.\n\nPlease check your settings and retry.\n\nFurthermore, you can copy the command to the clipboard and execute it on the command-line to get a detailed error message.", "Sent", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
 
         #endregion
 
