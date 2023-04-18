@@ -10,7 +10,7 @@
 
 ----
 
-<img src="https://raw.githubusercontent.com/urbanware-org/msgui/main/Source/MsgUI/Resources/Images/MsgUI.png" alt="MsgUI" align="right"/>
+<img src="https://raw.githubusercontent.com/urbanware-org/msgui/main/Stuff/GitHub/MsgUI.png" alt="MsgUI" width="336px" align="right"/>
 
 ## Definition
 
@@ -26,7 +26,7 @@ Even though, administrators should be able to use the command-line or the *Power
 
 As you can see on the right, the project is quite elementary and, as such, not a complete alternative for the command-line use of `msg.exe`.
 
-Notice that `msg.exe` is included in professional and enterprise editions of *Windows*, but not in any home edition.
+Notice that `msg.exe` is included in professional and enterprise editions of *Windows*, but not in the home edition.
 
 [Top](#msgui-)
 
@@ -50,7 +50,7 @@ Nevertheless, it is always on top (in the foreground) and cannot be minimized.
 
 ## Requirements
 
-As already mentioned above, `msg.exe` is not included in *Windows* home editions, so a professional or enterprise version is required.
+As already mentioned above, `msg.exe` is not included in *Windows* home editions, so a professional or enterprise edition is required.
 
 ### Binary
 
