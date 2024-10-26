@@ -62,7 +62,7 @@ namespace MsgUI
                 if (File.Exists(msg))
                 {
                     if (confirm)
-                        MessageBox.Show("The \"msg.exe\" executable was found at the given path.", "Path to executable", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Check successful.\n\nThe \"msg.exe\" executable was found at the given path.", "Path to executable", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return true;
                 }
                 else
