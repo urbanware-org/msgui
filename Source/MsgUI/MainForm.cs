@@ -11,6 +11,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace MsgUI
@@ -39,6 +40,7 @@ namespace MsgUI
 
         private void Main_Load(object sender, EventArgs e)
         {
+            loadLoggedInUsers();
             buildCommand();
         }
 
@@ -74,6 +76,21 @@ namespace MsgUI
             return false;
         }
 
+        private void loadLoggedInUsers()
+        {
+            cbCertainUser.Text = "";
+            cbCertainUser.Items.Clear();
+
+            var users = Wtsapi32.GetLoggedInUsers().OrderBy(user => user);
+
+            foreach (var user in users)
+            {
+                cbCertainUser.Items.Add(user);
+            }
+
+            cbCertainUser.SelectedIndex = -1;
+        }
+
         #endregion
 
         #region Send message event handler
@@ -82,12 +99,12 @@ namespace MsgUI
         {
             if (rbCertainUser.Checked)
             {
-                if (tbCertainUser.Text == "")
+                if (cbCertainUser.Text == "")
                 {
-                    MessageBox.Show("User name must not be empty.", "User", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("User name must not be empty.", "User", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                user = "\"" + tbCertainUser.Text + "\"";
+                user = "\"" + cbCertainUser.Text + "\"";
             }
             else
             {
@@ -108,7 +125,7 @@ namespace MsgUI
 
             if (tbMessage.Text == "")
             {
-                MessageBox.Show("Message text must not be empty.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Message text must not be empty.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -150,17 +167,37 @@ namespace MsgUI
             tbServer.Text = server;
         }
 
-        private void tbCertainUser_TextChanged(object sender, EventArgs e)
+        private void btnRefreshUsers_Click(object sender, EventArgs e)
         {
-            user = "\"" + tbCertainUser.Text + "\"";
+            loadLoggedInUsers();
+            cbCertainUser.Focus();
+        }
+
+        private void cbCertainUser_DropDown(object sender, EventArgs e)
+        {
+            if (chkAutoRefresh.Checked)
+            {
+                loadLoggedInUsers();
+            }
+        }
+
+        private void cbCertainUser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            user = "\"" + cbCertainUser.Text + "\"";
             buildCommand();
         }
 
-        private void tbMessage_TextChanged(object sender, EventArgs e)
+        private void cbCertainUser_TextChanged(object sender, EventArgs e)
         {
-            int charsLeft = 240 - tbMessage.TextLength;
-            lblCharsLeft.Text = charsLeft.ToString() + " characters left";
+            user = "\"" + cbCertainUser.Text + "\"";
             buildCommand();
+        }
+
+        private void chkAutoRefresh_CheckedChanged(object sender, EventArgs e)
+        {
+            btnRefreshUsers.Enabled = !chkAutoRefresh.Checked;
+            loadLoggedInUsers();
+            cbCertainUser.Focus();
         }
 
         private void lnkClearMessage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -176,22 +213,29 @@ namespace MsgUI
             buildCommand();
         }
 
-        private void rbCertainUser_CheckedChanged(object sender, EventArgs e)
+        private void rbAllUsers_CheckedChanged(object sender, EventArgs e)
         {
-
-            if (rbCertainUser.Checked)
+            if (rbAllUsers.Checked)
             {
-                tbCertainUser.Enabled = true;
-                tbCertainUser.Focus();
-                user = "\"\"";
-            }
-            else
-            {
-                tbCertainUser.Enabled = false;
-                tbCertainUser.Text = "";
+                cbCertainUser.Enabled = false;
+                chkAutoRefresh.Enabled = false;
+                btnRefreshUsers.Enabled = false;
+                cbCertainUser.Text = "";
                 user = "*";
             }
+            buildCommand();
+        }
 
+        private void rbCertainUser_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbCertainUser.Checked)
+            {
+                cbCertainUser.Enabled = true;
+                chkAutoRefresh.Enabled = true;
+                btnRefreshUsers.Enabled = !chkAutoRefresh.Checked;
+                cbCertainUser.Focus();
+                user = "\"\"";
+            }
             buildCommand();
         }
 
@@ -218,6 +262,13 @@ namespace MsgUI
             buildCommand();
         }
 
+        private void tbMessage_TextChanged(object sender, EventArgs e)
+        {
+            int charsLeft = 240 - tbMessage.TextLength;
+            lblCharsLeft.Text = charsLeft.ToString() + " characters left";
+            buildCommand();
+        }
+        
         private void tbMsgPath_Validated(object sender, EventArgs e)
         {
             msg = tbMsgPath.Text;
