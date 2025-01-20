@@ -26,7 +26,7 @@ Even though, administrators should be able to use the command-line or the *Power
 
 As you can see on the right, the project is quite elementary and, as such, not a complete alternative for the command-line use of `msg.exe`.
 
-Notice that `msg.exe` is included in professional and enterprise editions of *Windows*, but not in the home edition.
+Notice that `msg.exe` is not included in all *Windows* editions. Details can be found [below](#requirements).
 
 [Top](#msgui-)
 
@@ -50,13 +50,14 @@ Nevertheless, it is always on top (in the foreground) and cannot be minimized.
 
 ## Requirements
 
-As already mentioned above, `msg.exe` is not included in *Windows* home editions, so a professional or enterprise edition is required.
-
 ### Binary
 
 There are only two requirements in order to use the program.
 
-*   *Microsoft Windows 7* and above
+> [!NOTE]
+> The `msg.exe` binary is only included in *Windows Professional*, *Windows Enterprise* and *Windows Educational* (e.g. *Windows 11 SE*) editions as well as *Windows Server* products in general.
+
+*   *Microsoft Windows 7* and above or alternatively *Microsoft Windows Server 2003* and above
 *   *Microsoft .NET Framework* 4.5 (or higher)
 
 ### Source code
